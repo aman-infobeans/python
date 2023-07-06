@@ -1,0 +1,17 @@
+{% extends "AppProfile/base.html" %}
+
+<asd>as</asd>
+{% block profilebody%}
+
+<div class="jumbotron">
+  {% if register %}
+  <b>nice</b>
+  {% endif %}
+
+  <h1>Signup</h1>
+  <form enctype="multipart/form-data" method="POST">
+    {{UserForm.as_p}} {{UserProfileForm.as_p}} {% csrf_token %}
+    <input type="submit" value="Register" />
+  </form>
+</div>
+{% endblock %}

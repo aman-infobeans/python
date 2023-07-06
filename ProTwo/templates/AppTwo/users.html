@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static "css/style.css" %}" />
+<body>
+    <p>i am users</p>
+
+    {% if form %}
+        <form method="post">
+            {{form}}
+            {% csrf_token %}
+            <input type="submit" />
+        </form>
+    {% endif %}
+
+    {% if users %}
+        <table>
+            <tbody>
+                {% for user in users %}
+                    <tr><td>User Info</td></tr>
+                    <tr><td>{{user.Firstname}}</td></tr>
+                    <tr><td>{{user.Lastname}}</td></tr>
+                    <tr><td>{{user.Email}}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</body>
+</html>

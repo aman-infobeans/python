@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "AppTwo/base.html" %} {% block bodyblock %}
+<body>
+  <p>i m index</p>
+  {% if chapters %}
+  <table>
+    <tbody>
+      {% for chapter in chapters %}
+      <tr>
+        <td>{{chapter}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</body>
+{% endblock %}

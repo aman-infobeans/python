@@ -1,0 +1,11 @@
+body {
+  background: lightgray;
+}
+
+td {
+  border: 1px solid #000;
+}
+
+tr {
+  margin: 0 0 10px 0;
+}
